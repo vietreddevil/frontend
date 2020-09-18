@@ -14,20 +14,20 @@ body {
     background-color: #131313;
 } 
 
-.container {
+.product_container {
     position: relative;
 }
 
-.container .card {
+.product_container .product_card {
     position: relative;
-    width: 320px;
-    height: 450px;
+    width: 100%;
+    height: 320px;
     background-color: #232323;
     border-radius: 20px;
     overflow: hidden;
 }
 
-.container .card::before {
+.product_container .product_card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -39,11 +39,11 @@ body {
     transition: 0.5s ease-in-out;
 }
 
-.container .card:hover::before {
+.container .card:hover .product_container .product_card::before {
     clip-path: circle(200px at 80% 20%);
 }
 
-.container .card:after {
+.product_container .product_card:after {
     content: 'Nike';
     position: absolute;
     top: 30%;
@@ -54,7 +54,7 @@ body {
     color: rgba(255,255,255,0.04);
 }
 
-.container .card .imgBx {
+.product_container .product_card .imgBx {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -69,37 +69,41 @@ body {
     transform: translateY(0%); 
 }
 
-.container .card .imgBx img {
+.product_container .product_card .imgBx img {
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 200px;
+    transition: .5s;
+}
+.container .card:hover .imgBx img {
     transform: translate(-50%, -50%) rotate(25deg);
-    width: 270px;
 }
 
-.container .card .contentBx {
+.product_container .product_card .contentBx {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 100px;
     text-align: center;
     transition: 1s;
-    z-index: 10;
+    z-index: 10000;
 }
 
 .container .card:hover .contentBx {
     height: 210px;
 }
 
-.container .card .contentBx h2 {
+.product_container .product_card .contentBx h2 {
     position: relative;
     font-weight: 600;
     letter-spacing: 1px;
     color: #fff;
 }
 
-.container .card .contentBx .size ,
-.container .card .contentBx .color {
+.product_container .product_card .contentBx .size ,
+.product_container .product_card .contentBx .color {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,8 +125,8 @@ body {
     transition-delay: .6s;
 }
 
-.container .card .contentBx .size h3,
-.container .card .contentBx .color h3 {
+.product_container .product_card .contentBx .size h3,
+.product_container .product_card .contentBx .color h3 {
     color: #fff;
     font-weight: 300;
     font-size: 14px;
@@ -131,7 +135,7 @@ body {
     margin-right: 10px;
 }
 
-.container .card .contentBx .size span {
+.product_container .product_card .contentBx .size span {
     width: 16px;
     height: 26px;
     text-align: center;
@@ -146,11 +150,11 @@ body {
     cursor: pointer;
 }
 
-.container .card .contentBx .size span:hover {
+.product_container .product_card .contentBx .size span:hover {
     background-color: #9dbc28;
 }
 
-.container .card .contentBx .color span {
+.product_container .product_card .contentBx .color span {
     width: 20px;
     height: 20px;
     background-color: #ff0;
@@ -159,19 +163,19 @@ body {
     cursor: pointer;
 }
 
-.container .card .contentBx .color span:nth-child(2) {
+.product_container .product_card .contentBx .color span:nth-child(2) {
     background-color: #9dbc28;
 }
 
-.container .card .contentBx .color span:nth-child(3) {
+.product_container .product_card .contentBx .color span:nth-child(3) {
     background-color: #03a9f4;
 }
 
-.container .card .contentBx .color span:nth-child(4) {
+.product_container .product_card .contentBx .color span:nth-child(4) {
     background-color: #e91e63;
 }
 
-.container .card .contentBx a {
+.product_container .product_card .contentBx a {
     display: inline-block;
     padding: 10px 20px;
     background-color: #fff;
