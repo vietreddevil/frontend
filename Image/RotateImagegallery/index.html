@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rotate image gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/rotate.css">
     <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/textaround.css">
 </head>
 <body>
     <div class="box">
-        <span style="--i:1" onclick="selectImage('imgs/i1_trans.png', 'Messi');"><img src="./imgs/i1.jpg"></span>
-        <span style="--i:2" onclick="selectImage('imgs/i2_trans.png', 'Ronaldo');"><img src="./imgs/i2.jpg"></span>
-        <span style="--i:3" onclick="selectImage('imgs/i3_trans.png', 'Degea');"><img src="./imgs/i3.jpg"></span>
-        <span style="--i:4" onclick="selectImage('imgs/i4_trans.png', 'Degea');"><img src="./imgs/i4.jpg"></span>
-        <span style="--i:5" onclick="selectImage('imgs/i5_trans.png', 'Degea');"><img src="./imgs/i5.jpg"></span>
-        <span style="--i:6" onclick="selectImage('imgs/i6_trans.png', 'Degea');"><img src="./imgs/i6.jpg"></span>
-        <span style="--i:7" onclick="selectImage('imgs/i7_trans.png', 'Van der Sar');"><img src="./imgs/i7.jpg"></span>
-        <span style="--i:8" onclick="selectImage('imgs/i8_trans.png', 'Kaká');"><img src="./imgs/i8.jpg"></span>
+        <span style="--i:1" onclick="selectImage('imgs/i1_trans.png', 'Messi', '33', 's');"><img src="./imgs/i1.jpg"></span>
+        <span style="--i:2" onclick="selectImage('imgs/i2_trans.png', 'Ronaldo', '35', 's');"><img src="./imgs/i2.jpg"></span>
+        <span style="--i:3" onclick="selectImage('imgs/i3_trans.png', 'Degea', '30', 'a');"><img src="./imgs/i3.jpg"></span>
+        <span style="--i:4" onclick="selectImage('imgs/i4_trans.png', 'Bruno', '26', 'a');"><img src="./imgs/i4.jpg"></span>
+        <span style="--i:5" onclick="selectImage('imgs/i5_trans.png', 'Pogba', '27', 'a');"><img src="./imgs/i5.jpg"></span>
+        <span style="--i:6" onclick="selectImage('imgs/i6_trans.png', 'Rooney', '34', 'a');"><img src="./imgs/i6.jpg"></span>
+        <span style="--i:7" onclick="selectImage('imgs/i7_trans.png', 'Van der Sar', '49', 'a');"><img src="./imgs/i7.jpg"></span>
+        <span style="--i:8" onclick="selectImage('imgs/i8_trans.png', 'Kaká', '38', 's');"><img src="./imgs/i8.jpg"></span>
     </div>
     <div class="card_container">
         <div class="card">
@@ -27,22 +31,66 @@
             <div class="contentBx">
                 <h2></h2>
                 <div class="size">
-                    <h3>Size: </h3>
-                    <span>7</span>
-                    <span>8</span>
-                    <span>9</span>
-                    <span>10</span>
+                    <h3>Age: </h3>
+                    <span class="w-fit px-1 age_1">7</span>
+                    <span class="w-fit px-1 age_2">8</span>
+                    <span class="w-fit px-1 age_3">9</span> 
                 </div>
                 <div class="color">
-                    <h3>Color: </h3>
-                    <span></span>
-                    <span></span>
-                    <span></span> 
+                    <h3>Class: </h3>
+                    <span class="fs-14 text-white b">B</span>
+                    <span class="fs-14 text-white a">A</span>
+                    <span class="fs-14 text-white s">S</span> 
                 </div>
-                <a href="#">Buy now!</a>
+                <a style="cursor: pointer;" onclick="showCareer();">Info</a>
             </div>
         </div>
     </div>
-    <script src="index.js"></script>
+    <div class="career">
+      <h1>Pure CSS Timeline</h1>
+      <div class="timeline">
+           <ul>
+               <li> 
+                   <div class="content">
+                       <h3>What is Lorem Ipsum?</h3>
+                       <p>
+                        <section>
+                            <div class="circle circle2">
+                                <img src="imgs/i1.jpg">
+                            </div>
+                            <div>
+                                <h2>MARTIAL WINS PLAYERS' PLAYER OF THE YEAR</h2>
+                                <p>
+                                    The striker delivered his best campaign yet in front of goal, netting 23 times in 48 appearances to
+                                    finish as the club's top scorer across all competitions.
+                    
+                                    The Frenchman was handed the no.9 shirt by Ole Gunnar Solskjaer last summer – an indication that he
+                                    would be asked to spearhead the United attack – and has responded superbly to the challenge.
+                    
+                                    And while fans voted for Bruno Fernandes to win the Sir Matt Busby Player of the Year prize, Martial's
+                                    peers have chosen to honour his efforts.
+                                    The striker recently spoke to Inside United magazine, and credited Solskjaer's influence on his
+                                    impressive 2019/20.                                   
+                                </p>
+                            </div>
+                        </section>
+                       </p>
+                   </div>
+                   <div class="time">
+                       <h4>January 2018</h4>
+                   </div>
+               </li>
+               <div style="clear: both;"></div>
+           </ul>
+      </div>
+    </div>
+    <div id="scrollToTop" onclick="goToTop();">
+        <i class="fa fa-arrow-circle-up"></i>
+    </div>
+    <!-- hidden input -->
+    <input type="hidden">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/info.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

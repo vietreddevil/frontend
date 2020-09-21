@@ -1,0 +1,22 @@
+
+
+/*color*/
+.text-white {
+    color: white !important;
+}
+
+/*font-size*/
+.fs-14 {
+    font-size: 14px !important;
+}
+
+/*padding*/
+.px-1 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+
+/*width*/
+.w-fit {
+    width: fit-content !important;
+}

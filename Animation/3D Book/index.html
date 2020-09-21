@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Book</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        #text {
+            position: absolute;
+            color: #fff;
+            font-weight: 700;
+            font-size: 3em;
+            line-height: 0.9em;
+            letter-spacing: 2px;
+            text-align: center;
+            transform: rotate(-37.5deg) skew(25deg);
+            right: 20px;
+            bottom: 50px;
+        }
+
+        #text::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 30px;
+            left: -30px;
+            color: rgba(0, 0, 0, 0.3);
+            text-shadow: none;
+            filter: blur(8px);
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="book">
+        <div class="cover"></div>
+        <h2>Manchester <span>United</span></h2>
+        <span class="writter">Design by <i>11zuna</i></span>
+    </div>
+    <div id="text" data-text="Manchester United">
+        Manchester <br>United
+    </div>
+    <script>
+        var text = document.getElementById('text');
+        var shadow = "";
+        for (var i = 0; i < 20; i++) {
+            shadow += (shadow ? ',' : '') + -i * 1 + 'px ' + i * 1 + 'px 0 #e03d3d';
+        }
+        text.style.textShadow = shadow;
+    </script>
+</body>
+</html>

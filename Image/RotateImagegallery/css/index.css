@@ -29,3 +29,28 @@ body {
 .card_container .card {
     margin: 0 auto;
 }
+#scrollToTop {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: fit-content;
+    display: none;
+}
+#scrollToTop i {
+    font-size: 2em;
+    color: cornflowerblue;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#scrollToTop:hover i {
+    font-size: 3em;
+}
+
+.career {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    transition: 0.5s;
+    transition-delay: 1s;
+}

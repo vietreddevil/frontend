@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: verdana;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(floor.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.book {
+    position: relative;
+    top: 0;
+    width: 400px;
+    height: 600px;
+    background-color: #fff;
+    transform: rotate(-37.5deg) skewX(10deg);
+    box-shadow: -35px 35px 50px rgba(0, 0, 0, 1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.book:hover {
+    transform: rotate(-37.5deg) skewX(10deg) translate(20px, -20px);
+    box-shadow: -50px 50px 100px rgba(0, 0, 0, 1);
+}
+.book::before {
+    content: '';
+    width: 30px;
+    height: 100%;
+    background-color: #8a0e0e;
+    position: absolute;
+    background: url(outside.jpg);
+    background-size: cover;
+    top: 0;
+    left: 0;
+    transform: skewY(-45deg) translate(-30px, -15px);
+    box-shadow: inset -10px 0 20px rgba(0, 0, 0, 0.2);
+}
+.book::after {
+    content: '';
+    width: 100%;
+    height: 30px;
+    background-color: #ccc;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: skewX(-45deg) translate(15px, 30px); 
+}
+.book h2 {
+    position: absolute;
+    font-size: 3em;
+    bottom: 100px;
+    left: 20px;
+    line-height: 1em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #fff;
+}
+.book h2 span {
+    background: url(bg.jpg);
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+.book .writter {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #262626;
+    font-size: 0.6em;
+    padding-top: 5px;
+    font-weight: 500;
+    border-top-left-radius: 1px solid #262626;
+}
+.book .writter i {
+    font-weight: 700;
+}
+.book .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    background: url(oldtrafford.jpg);
+    background-size: cover;
+}

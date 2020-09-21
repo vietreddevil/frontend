@@ -135,7 +135,7 @@
 }
 
 .card_container .card .contentBx .size span:hover {
-    background-color: #9dbc28;
+    /* background-color: #9dbc28; */
 }
 
 .card_container .card .contentBx .color span {
